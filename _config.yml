@@ -9,11 +9,7 @@ description: >
   <script>
     function copyEmail() {
       const emailText = document.getElementById("email").innerText;
-      navigator.clipboard.writeText(emailText).then(() => {
-        alert("Email copied to clipboard!");
-      }, () => {
-        alert("Failed to copy email.");
-      });
+      navigator.clipboard.writeText(emailText);
     }
   </script>
   <br><br>
