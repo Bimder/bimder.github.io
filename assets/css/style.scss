@@ -1,152 +1,30 @@
----
----
-
-// This front matter (the two lines of dashes) is required
-// for Jekyll to process the file and convert it to CSS.
-
-// --- 1. Variables ---
-// Define colors and fonts in one place for easy changes.
-
-$font-stack:        'Inter', sans-serif;
-$primary-text-color: #333333;
-$secondary-text-color: #666666;
-$link-color:        #007bff;
-$link-hover-color:  #0056b3;
-$background-color:  #ffffff;
-$wrapper-width:     960px;
-$border-color:      #e5e5e5;
-$button-bg-color:   #28a745;
-$button-text-color: #ffffff;
-
-
-// --- 2. Global Styles ---
-// Basic styles for the entire page.
+/*
+This CSS snippet is designed to ONLY apply the 'Inter' font
+to the entire body of your website. It does not contain any
+other layout, spacing, or color declarations.
+*/
 
 body {
-  font-family: $font-stack;
-  font-size: 16px;
-  line-height: 1.6;
-  color: $primary-text-color;
-  background-color: $background-color;
-  -webkit-font-smoothing: antialiased; // Improves font rendering on some displays
-  margin: 0;
-  padding: 0;
+  font-family: 'Inter', sans-serif;
+  /*
+    The properties below are optional but recommended for better
+    font rendering, especially on different operating systems.
+    They don't affect layout.
+  */
+  -webkit-font-smoothing: antialiased; /* For Chrome/Safari on macOS */
+  -moz-osx-font-smoothing: grayscale;  /* For Firefox on macOS */
 }
 
-// --- 3. Layout ---
-// Styles for the main page containers.
+/*
+If you only want specific elements to use Inter (e.g., headings),
+you would uncomment and modify rules like these instead of 'body':
 
-.wrapper {
-  max-width: $wrapper-width;
-  margin: 0 auto; // Centers the content
-  padding: 2rem 1.5rem; // Add some space on the sides and top/bottom
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
 }
 
-header, section, footer {
-  margin-bottom: 2rem;
+p {
+  font-family: 'Inter', sans-serif;
 }
 
-// --- 4. Header ---
-// Styles for the site title, tagline, and links.
-
-header {
-  text-align: center;
-  border-bottom: 1px solid $border-color;
-  padding-bottom: 2rem;
-  margin-bottom: 2.5rem;
-
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-
-    a {
-      text-decoration: none;
-      color: #000000; // Matches your inline style
-    }
-  }
-
-  p {
-    font-size: 1.1rem;
-    color: $secondary-text-color;
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-
-  p.view {
-    font-size: 0.9rem;
-    a {
-      color: $link-color;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .downloads {
-    list-style: none;
-    padding: 0;
-    margin: 1.5rem 0 0 0;
-
-    li {
-      display: inline-block;
-      margin: 0 0.5rem;
-    }
-
-    a {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: $button-bg-color;
-      color: $button-text-color;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background-color 0.2s ease-in-out;
-
-      &:hover {
-        background-color: darken($button-bg-color, 10%);
-      }
-    }
-  }
-}
-
-// --- 5. Main Content ---
-// Your content from Markdown files will go here.
-
-section {
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  a {
-    color: $link-color;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-// --- 6. Footer ---
-// Styles for the page footer.
-
-footer {
-  text-align: center;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid $border-color;
-  color: $secondary-text-color;
-  font-size: 0.9rem;
-
-  a {
-    color: $link-color;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
+*/
