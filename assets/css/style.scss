@@ -1,0 +1,75 @@
+---
+# This empty front matter is required for Jekyll to process the SCSS file
+---
+
+// Optional: If you are using a Jekyll theme like Minima,
+// you might want to import its default styles first so you're just overriding/adding.
+// For example, for Minima:
+// @import "minima";
+// If you don't know your theme's SASS entry point or don't want to import it,
+// you can omit the @import line. Your styles below will then be the primary styles.
+
+// Define the Inter font family
+$font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+// Apply the font to the body and most text elements
+body {
+  font-family: $font-family-base;
+  font-weight: 400; // Regular weight for body text
+  line-height: 1.6; // A good default line height for readability
+  color: #333; // A common default text color, adjust as needed
+}
+
+// Apply the font to headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-base;
+  font-weight: 700; // Bold weight for headings
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  line-height: 1.2;
+}
+
+// Specific styling for your site title if needed
+// The h1 rule above might already cover this, but this is more specific.
+.wrapper header h1 a {
+  font-family: $font-family-base;
+  font-weight: 700; // Or a different weight if you prefer, e.g., 600 for Semi-Bold
+  // color: black; // You already have this inline, but could move it here
+}
+
+// You can add more specific rules below
+p {
+  font-family: $font-family-base;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+a {
+  font-family: $font-family-base; // Ensure links also use Inter
+  // color: #007bff; // Example link color
+  // text-decoration: none;
+
+  // &:hover {
+  //   text-decoration: underline;
+  // }
+}
+
+// If you have code blocks or preformatted text
+pre, code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; // A common monospace stack
+  font-size: 0.9em;
+}
+
+// ---
+// Add any other custom styles or overrides below this line
+// ---
+
+// Example: If you want paragraphs to use a slightly lighter weight (if available and loaded)
+// p {
+//   font-weight: 400; // Inter's Regular
+// }
+
+// Example: Make links slightly bolder
+// a {
+//   font-weight: 500; // Inter's Medium
+// }
